@@ -33,7 +33,7 @@ button, img { user-select: none; }
 button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 .screen, .overlay { position: absolute; inset: 0; }
 .screen { min-height: 100%; background-position: center top; background-size: cover; background-repeat: no-repeat; }
-#home { background-image: url("../assets/static/image/bg.ead9a73e.jpg"); }
+#home { background-image: url("../assets/static/image/bg.ead9a73e.jpg?v=10"); }
 #game { background-image: url("../assets/static/image/bg.5f682dba.jpg"); overflow: auto; }
 #rank { background-image: url("../assets/static/image/bg.22ba2e11.jpg"); overflow: auto; }
 #poster { background-image: url("../assets/static/image/bg.9fb073bd.jpg"); overflow: auto; }
