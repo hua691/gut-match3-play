@@ -5,7 +5,7 @@ import qrcode
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-PLAY_URL = os.environ.get("PLAY_URL", "https://hua691.github.io/gut-match3-play/?v=5")
+PLAY_URL = os.environ.get("PLAY_URL", "https://hua691.github.io/gut-match3-play/?v=6")
 OUT = os.path.join(ROOT, "海报.png")
 
 W, H = 1080, 2160
