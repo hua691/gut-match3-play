@@ -5,7 +5,7 @@ import qrcode
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-PLAY_URL = os.environ.get("PLAY_URL", "https://hua691.github.io/gut-match3-play/?v=7")
+PLAY_URL = os.environ.get("PLAY_URL", "https://hua691.github.io/gut-match3-play/?v=8")
 OUT = os.path.join(ROOT, "海报.png")
 
 W, H = 1080, 2160
@@ -14,7 +14,6 @@ THEME = os.path.join(ROOT, "assets", "static", "image", "theme.24d3b741.png")
 LOGO = os.path.join(ROOT, "image", "logo.png")
 KIT = os.path.join(ROOT, "assets", "static", "image", "prize_kit.png")
 FONT = r"C:\Windows\Fonts\msyhbd.ttc"
-FONT_R = r"C:\Windows\Fonts\msyh.ttc"
 
 def main():
     src = Image.open(BG).convert("RGBA")
@@ -66,21 +65,7 @@ def main():
     canvas.paste(card, (card_x, card_y), card)
 
     text = ImageDraw.Draw(canvas)
-    f1 = ImageFont.truetype(FONT_R, 32)
-    f2 = ImageFont.truetype(FONT, 42)
-    f3 = ImageFont.truetype(FONT_R, 32)
     f4 = ImageFont.truetype(FONT, 26)
-    lines = [
-        (f1, "参与即有机会可获得", (255, 255, 255)),
-        (f2, "价值千元检测试剂盒", (255, 236, 120)),
-        (f3, "或肠道健康沙龙邀约", (255, 255, 255)),
-    ]
-    text_x = kx + kw + 8
-    block_h = 54 * len(lines)
-    y = card_y + (card.height - block_h) / 2
-    for font, line, color in lines:
-        text.text((text_x, y), line, font=font, fill=color)
-        y += 54
     hint = "扫码立即玩"
     hw = text.textlength(hint, font=f4)
     text.text((card_x + (card.width - hw) / 2, card_y + card.height + 8), hint, font=f4, fill=(255, 255, 255))

@@ -224,7 +224,32 @@ button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 .result .hint {
   margin: auto 0 0; padding-top: .12rem;
   max-width: 6.4rem; font-size: .22rem; line-height: 1.35;
+  text-shadow: 0 .02rem .04rem rgba(80, 30, 0, .55);
 }
+.result.win-all {
+  height: 100%;
+  justify-content: space-evenly;
+  gap: .08rem;
+  padding: .92rem .24rem calc(.16rem + env(safe-area-inset-bottom, 0px));
+}
+.result.win-all .result-title { margin: 0 auto; }
+.result.win-all .score-card {
+  width: 6.2rem; margin: 0; padding: .42rem .38rem .18rem;
+}
+.result.win-all .score-line { margin: .08rem 0; }
+.result.win-all .rank-card { margin-top: .12rem; }
+.result.win-all .rank-card img.badge { width: 86%; margin: .08rem auto .1rem; }
+.result.win-all .comment { margin: .02rem .08rem 0; font-size: .23rem; line-height: 1.4; }
+.result.win-all .book { width: 5.7rem; height: 2.55rem; margin: 0; }
+.result.win-all .knowledge {
+  top: .58rem; left: .55rem; right: .55rem;
+  font-size: .21rem; line-height: 1.28;
+}
+.result.win-all .manager-btn { margin: 0; }
+.result.win-all .manager-btn img { width: 5.5rem; }
+.result.win-all .actions { flex-wrap: nowrap; gap: .28rem; margin: 0; }
+.result.win-all .actions img { height: .8rem; }
+.result.win-all .hint { margin: 0; padding-top: 0; }
 
 @keyframes zoom-in { from { opacity: .5; transform: scale(1.1); } to { opacity: 1; transform: scale(1); } }
 @keyframes slide-up { from { opacity: 0; transform: translateY(.5rem); } to { opacity: 1; transform: none; } }
