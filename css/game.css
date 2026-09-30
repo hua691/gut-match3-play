@@ -59,10 +59,11 @@ button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 }
 .rank-bubble img { width: 100%; height: 100%; object-fit: contain; }
 .bgm-btn {
-  position: absolute; top: .2rem; right: .2rem;
-  width: .72rem; height: .72rem;
+  position: absolute; left: .2rem; top: .86rem; z-index: 5;
+  width: .84rem; height: .79rem;
 }
-.bgm-btn img { width: 100%; height: 100%; }
+.bgm-btn img { width: 100%; height: 100%; object-fit: contain; }
+.bgm-btn.playing img { animation: bgm-spin 1s linear infinite; }
 #home { padding-top: 1rem; }
 .theme {
   display: block; width: 5.4rem; height: 3.91rem; margin: 0 auto;
@@ -70,7 +71,7 @@ button { border: 0; padding: 0; background: transparent; cursor: pointer; }
   animation: zoom-in .8s .2s both;
 }
 .start-btn {
-  position: absolute; left: 0; right: 0; bottom: 1.15rem;
+  position: absolute; left: 0; right: 0; bottom: .28rem;
   animation: slide-up .8s .2s both;
 }
 .start-btn img { display: block; width: 5.3rem; height: 1.57rem; margin: 0 auto; object-fit: contain; }
@@ -222,6 +223,7 @@ button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 @keyframes zoom-in { from { opacity: .5; transform: scale(1.1); } to { opacity: 1; transform: scale(1); } }
 @keyframes slide-up { from { opacity: 0; transform: translateY(.5rem); } to { opacity: 1; transform: none; } }
 @keyframes bubble { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-.08rem); } }
+@keyframes bgm-spin { to { transform: rotate(360deg); } }
 @keyframes finger { from { transform: rotate(-10deg); } to { transform: rotate(10deg); } }
 @keyframes pop { from { opacity: 0; transform: scale(.4); } }
 @keyframes gone { to { opacity: 0; transform: scale(1.6); } }

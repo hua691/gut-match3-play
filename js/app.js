@@ -135,6 +135,7 @@ function render() {
 function renderChrome() {
   document.querySelectorAll("[data-bgm]").forEach((node) => {
     node.src = IMG + (state.bgmOn ? "bgm_play.381f6aaa.png" : "bgm_stop.cf5fa826.png");
+    node.closest(".bgm-btn")?.classList.toggle("playing", state.bgmOn);
   });
 }
 
