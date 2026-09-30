@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <title>大家消消乐 肠享好时光</title>
+  <link rel="stylesheet" href="css/game.css" />
+</head>
+<body>
+  <div class="phone" id="phone">
+  <section id="loading" class="screen">
+    <img src="assets/static/image/loading_icon.4cf91327.gif" alt="加载中" />
+  </section>
+
+  <section id="home" class="screen" hidden>
+    <img class="logo" src="image/logo.png" alt="北大方正人寿江苏分公司" />
+    <button class="bgm-btn" data-action="bgm" type="button"><img data-bgm alt="" /></button>
+    <div class="side-tabs">
+      <button type="button" data-action="rules"><img src="assets/static/image/tab_rules.2280077b.png" alt="活动规则" /></button>
+      <button type="button" data-action="prize"><img src="assets/static/image/tab_prize.50b50917.png" alt="活动奖品" /></button>
+    </div>
+    <button class="rank-bubble" type="button" data-action="rank">
+      <img src="assets/static/image/tab_rank.d5b26be7.png" alt="排行榜" />
+    </button>
+    <img class="theme" src="assets/static/image/theme.24d3b741.png" alt="大家消消乐 肠享好时光" />
+    <button class="start-btn" type="button" data-action="start"><img src="assets/static/image/start.416fb9e8.png" alt="开始游戏" /></button>
+  </section>
+
+  <section id="game" class="screen" hidden>
+    <img class="logo" src="image/logo.png" alt="北大方正人寿江苏分公司" />
+    <button class="bgm-btn" data-action="bgm" type="button"><img data-bgm alt="" /></button>
+    <div class="side-tabs">
+      <button type="button" data-action="rules"><img src="assets/static/image/tab_rules.2280077b.png" alt="活动规则" /></button>
+      <button type="button" data-action="prize"><img src="assets/static/image/tab_prize.50b50917.png" alt="活动奖品" /></button>
+    </div>
+    <img id="round-title" class="round-title" alt="" />
+    <p class="goal">请在 <b id="steps-total">8</b> 步以内消除 <b id="bad-target">28</b> 个有害菌<br />即可成功通关</p>
+    <div class="meters">
+      <div class="meter">
+        <div class="meter-label">已使用步数</div>
+        <div class="meter-num"><b id="steps-used">0</b>/<span id="steps-cap"></span></div>
+      </div>
+      <div class="meter">
+        <div class="meter-label">已消除有害菌</div>
+        <div class="meter-num"><b id="bad-used">0</b>/<span id="bad-cap"></span></div>
+      </div>
+    </div>
+    <div class="board-wrap">
+      <div class="score-x">得分 <b id="live-score">0</b></div>
+      <div id="board" class="board">
+        <div id="tiles" class="tile-layer"></div>
+      </div>
+    </div>
+    <div id="banner" class="banner" hidden>
+      <div class="banner-main"><span>成功消除</span><b id="banner-count">0</b><span>个有害病菌</span></div>
+      <div class="banner-tip" id="banner-tip"></div>
+    </div>
+  </section>
+
+  <section id="result" class="overlay result" hidden>
+    <img class="logo" src="image/logo.png" alt="北大方正人寿江苏分公司" />
+    <div id="result-title" class="result-title win"></div>
+    <div class="score-card">
+      <div class="score-line"><img src="assets/static/image/bad.e7701dce.png" alt="" /><span>成功消除有害菌</span><b id="result-bad">0个</b></div>
+      <div class="score-line"><img src="assets/static/image/good2.0b5e797e.png" alt="" /><span>成功守护有益菌</span><b id="result-good">0个</b></div>
+      <div class="score-line"><span>得分</span><b id="result-score">0</b></div>
+      <div id="result-rank-block" class="rank-card">
+        <img id="result-rank-img" class="badge" alt="" />
+        <div id="result-rank-name"></div>
+        <p id="result-comment" class="comment"></p>
+      </div>
+    </div>
+    <p class="hint">*本游戏为趣味闯关，旨在科普肠道健康知识，不作为医疗诊断依据</p>
+    <div class="book" id="result-book">
+      <div id="result-knowledge" class="knowledge"></div>
+    </div>
+    <button id="btn-manager" class="manager-btn" type="button"><img src="assets/static/image/btn_manager.png" alt="联系你的客户经理领大奖" /></button>
+    <div class="actions">
+      <button id="btn-again" type="button" data-action="again"><img src="assets/static/image/btn_again.a8b01706.png" alt="再来一次" /></button>
+      <button id="btn-next" type="button" data-action="next"><img src="assets/static/image/btn_next.547c6ce5.png" alt="下一关" /></button>
+      <button id="btn-poster" type="button" data-action="poster"><img src="assets/static/image/btn_share.d010945e.png" alt="分享" /></button>
+      <button type="button" data-action="home"><img src="assets/static/image/btn_back_index.8a575fa8.png" alt="返回首页" /></button>
+    </div>
+  </section>
+
+  <section id="howto" class="overlay howto" hidden>
+    <div class="howto-card">
+      <img class="rules" src="assets/static/image/game_rules.b7cd129a.png" alt="游戏规则" />
+      <img class="finger" src="assets/static/image/finger.2957c077.png" alt="" />
+    </div>
+    <button type="button" data-action="howto-go"><img class="howto-go" src="assets/static/image/start.766e35a5.png" alt="开始" /></button>
+  </section>
+
+  <section id="sheet" class="overlay sheet" hidden>
+    <div id="sheet-frame" class="sheet-frame">
+      <img id="sheet-body" alt="" />
+    </div>
+    <button type="button" data-action="close-modal"><img class="close-x" src="assets/static/image/ic_close.818a73c7.png" alt="关闭" /></button>
+  </section>
+
+  <section id="rank" class="screen" hidden>
+    <button class="rank-back" type="button" data-action="home"><img src="assets/static/image/btn_rank_back.png" alt="返回" /></button>
+    <div class="rank-mine">
+      <p>我的积分: <b id="my-score">0</b>　　我的排名: <b id="my-place">-</b></p>
+      <p>我的信息: <span id="my-phone">—</span></p>
+    </div>
+    <div class="podium" id="podium"></div>
+    <div class="rank-table">
+      <div class="rank-head"><span>排名</span><span>用户信息</span><span>积分</span></div>
+      <div id="rank-list" class="rank-scroll"></div>
+    </div>
+    <p class="rank-foot">榜单仅展示前50名</p>
+    <button class="rank-poster" type="button" data-action="poster"><img src="assets/static/image/btn_poster.c7813f04.png" alt="分享我的荣誉战报" /></button>
+    <img class="rank-tips" src="assets/static/image/tips.acd26454.png" alt="" />
+  </section>
+
+  <section id="poster" class="screen" hidden>
+    <div class="poster-wrap">
+      <canvas id="poster-canvas"></canvas>
+      <p class="hint">长按保存海报</p>
+      <button type="button" data-action="back-result"><img class="back-home" src="assets/static/image/btn_back_index.8a575fa8.png" alt="返回" /></button>
+    </div>
+  </section>
+
+  <div id="toast" class="toast" hidden></div>
+  </div>
+  <script src="js/engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
