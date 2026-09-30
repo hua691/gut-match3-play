@@ -167,8 +167,9 @@ button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 .score-line { display: flex; align-items: center; margin: .08rem 0; }
 .score-line img { width: .45rem; height: .49rem; margin-right: .12rem; }
 .score-line b { margin-left: auto; color: var(--primary); }
-.rank-card { margin-top: .16rem; }
-.rank-card img.badge { width: 1.6rem; height: auto; display: block; margin: 0 auto .08rem; }
+.rank-card { margin-top: .1rem; text-align: center; }
+.rank-card img.badge { width: 100%; height: auto; display: block; margin: .06rem auto .08rem; }
+#result-rank-name { display: none; }
 .comment { font-size: .24rem; line-height: 1.4; }
 .actions { display: flex; justify-content: center; gap: .16rem; flex-wrap: wrap; margin-top: .06rem; }
 .actions img { height: 1.05rem; width: auto; }

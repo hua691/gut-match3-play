@@ -187,14 +187,14 @@ function renderResult() {
   const score = info.kind === "win-all" ? totalScore() : info.score;
   $("result-score").textContent = score;
   const rank = rankOf(info.kind === "win-all" ? totalScore() : state.rounds.reduce((s, r) => s + r.score, 0));
-  $("result-rank-name").textContent = rank.name;
+  $("result-rank-name").textContent = "";
   $("result-rank-img").src = IMG + rank.image;
   $("result-comment").textContent = rank.comment;
   $("btn-next").hidden = info.kind !== "win";
   $("btn-manager").hidden = info.kind === "lose";
   $("result-book").hidden = info.kind === "lose";
   $("btn-again").hidden = info.kind === "win";
-  $("btn-poster").hidden = info.kind !== "win-all";
+  $("btn-poster").hidden = true;
   $("result-rank-block").hidden = info.kind !== "win-all";
 }
 
