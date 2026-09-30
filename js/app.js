@@ -224,7 +224,7 @@ function renderRank() {
 
 function renderModal() {
   const map = {
-    rules: { title: IMG + "tab_rules.2280077b.png", body: IMG + "rules.d30d95b1.png", frame: IMG + "bg_modal2.f6c41725.png" },
+    rules: { title: IMG + "tab_rules.2280077b.png", body: IMG + "rules.d30d95b1.png?v=4", frame: IMG + "bg_modal2.f6c41725.png" },
     prize: { title: IMG + "tab_prize.50b50917.png", body: IMG + "tab_prize.50b50917.png", frame: IMG + "bg_modal1.90a830b4.png" },
     protocol: { title: IMG + "title_rules.d6d6c7d2.png", body: IMG + "protocol.e3577188.png", frame: IMG + "bg_modal3.3d7bc8c7.png" },
   };

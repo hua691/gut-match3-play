@@ -143,23 +143,24 @@ button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 .overlay { z-index: 6; overflow: auto; background: rgba(0, 0, 0, .45); }
 .howto-go { display: block; width: 4.39rem; height: auto; }
 .result {
-  background: url("../assets/static/image/result_bg.353ba11c.jpg") center top / 100vw auto no-repeat #7ec8f0;
-  padding: .9rem .3rem 1.2rem; text-align: center;
+  display: flex; flex-direction: column; align-items: center; min-height: 100%;
+  background: url("../assets/static/image/result_bg.353ba11c.jpg") center top / 100% auto no-repeat #7ec8f0;
+  padding: .7rem .3rem .2rem; text-align: center;
 }
-.result-title { margin: .2rem auto .2rem; background-size: cover; background-position: center; }
+.result-title { margin: .08rem auto .04rem; background-size: cover; background-position: center; }
 .result-title.win { width: 4rem; height: 2.74rem; background-image: url("../assets/static/image/win.ffb8c0bd.png"); }
 .result-title.lose { width: 5.65rem; height: 2.11rem; background-image: url("../assets/static/image/lose.bf8e3153.png"); }
 .result-title.win-all { width: 6.15rem; height: 1.72rem; background-image: url("../assets/static/image/win_all.d7ec65fa.png"); }
 .book {
-  width: 6.2rem; height: 3.4rem; margin: .16rem auto 0; position: relative;
+  width: 6.2rem; height: 3.4rem; margin: .04rem auto 0; position: relative;
   background: url("../assets/static/image/book_wrapper_bg.ae180b11.png") center / 100% 100% no-repeat;
 }
 .knowledge { position: absolute; left: .7rem; right: .7rem; top: .85rem; font-weight: 700; line-height: 1.35; color: #c62527; font-size: .24rem; text-align: center; }
 .knowledge p { margin: .02rem 0; }
-.manager-btn { display: block; width: 100%; margin: .12rem 0 .04rem; }
+.manager-btn { display: block; width: 100%; margin: .06rem 0 0; }
 .manager-btn img { display: block; width: 6.2rem; height: auto; margin: 0 auto; }
 .score-card {
-  width: 5.8rem; margin: .2rem auto; padding: .7rem .4rem .3rem;
+  width: 5.8rem; margin: .04rem auto 0; padding: .55rem .4rem .18rem;
   background: url("../assets/static/image/info_wrapper1_bg.a47e8f84.png") center / 100% 100% no-repeat;
   text-align: left; font-weight: 700;
 }
@@ -169,7 +170,7 @@ button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 .rank-card { margin-top: .16rem; }
 .rank-card img.badge { width: 1.6rem; height: auto; display: block; margin: 0 auto .08rem; }
 .comment { font-size: .24rem; line-height: 1.4; }
-.actions { display: flex; justify-content: center; gap: .16rem; flex-wrap: wrap; margin-top: .16rem; }
+.actions { display: flex; justify-content: center; gap: .16rem; flex-wrap: wrap; margin-top: .06rem; }
 .actions img { height: 1.05rem; width: auto; }
 
 .howto, .sheet { display: flex; align-items: center; justify-content: center; flex-direction: column; }
@@ -219,6 +220,10 @@ button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 .poster-wrap { padding: 1rem .4rem 1rem; text-align: center; }
 #poster-canvas { width: 4.68rem; height: auto; border-radius: .12rem; background: #fff; }
 .hint { color: #fff; font-weight: 700; }
+.result .hint {
+  margin: auto 0 0; padding-top: .12rem;
+  max-width: 6.4rem; font-size: .22rem; line-height: 1.35;
+}
 
 @keyframes zoom-in { from { opacity: .5; transform: scale(1.1); } to { opacity: 1; transform: scale(1); } }
 @keyframes slide-up { from { opacity: 0; transform: translateY(.5rem); } to { opacity: 1; transform: none; } }
