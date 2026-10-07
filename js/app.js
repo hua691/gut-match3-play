@@ -3,11 +3,11 @@ const MEDIA = "assets/static/media/";
 const LOGO = "image/logo.png";
 
 const TILES = {
-  1: IMG + "bad.e7701dce.png?v=11",
-  2: IMG + "good1.bec550f3.png?v=11",
-  3: IMG + "good2.0b5e797e.png?v=11",
-  4: IMG + "grape.ec727821.png?v=11",
-  5: IMG + "carrot.85a5d31e.png?v=11",
+  1: IMG + "bad.e7701dce.png?v=12",
+  2: IMG + "good1.bec550f3.png?v=12",
+  3: IMG + "good2.0b5e797e.png?v=12",
+  4: IMG + "grape.ec727821.png?v=12",
+  5: IMG + "carrot.85a5d31e.png?v=12",
 };
 
 const ROUND_TITLE = [
@@ -224,7 +224,7 @@ function renderRank() {
 
 function renderModal() {
   const map = {
-    rules: { title: IMG + "tab_rules.2280077b.png", body: IMG + "rules.d30d95b1.png?v=11", frame: IMG + "bg_modal2.f6c41725.png" },
+    rules: { title: IMG + "tab_rules.2280077b.png", body: IMG + "rules.d30d95b1.png?v=12", frame: IMG + "bg_modal2.f6c41725.png" },
     prize: { title: IMG + "tab_prize.50b50917.png", body: IMG + "tab_prize.50b50917.png", frame: IMG + "bg_modal1.90a830b4.png" },
     protocol: { title: IMG + "title_rules.d6d6c7d2.png", body: IMG + "protocol.e3577188.png", frame: IMG + "bg_modal3.3d7bc8c7.png" },
   };
