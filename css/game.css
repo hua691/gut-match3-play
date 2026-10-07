@@ -33,8 +33,8 @@ button, img { user-select: none; }
 button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 .screen, .overlay { position: absolute; inset: 0; }
 .screen { min-height: 100%; background-position: center top; background-size: cover; background-repeat: no-repeat; }
-#home { background-image: url("../assets/static/image/bg-home.jpg?v=14"); }
-#game { background-image: url("../assets/static/image/bg-game.jpg?v=14"); overflow: auto; }
+#home { background-image: url("../assets/static/image/bg-home.jpg?v=15"); }
+#game { background-image: url("../assets/static/image/bg-game.jpg?v=15"); overflow: auto; }
 #rank { background-image: url("../assets/static/image/bg.22ba2e11.jpg"); overflow: auto; }
 #poster { background-image: url("../assets/static/image/bg.9fb073bd.jpg"); overflow: auto; }
 #loading {
