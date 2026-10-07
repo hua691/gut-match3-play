@@ -5,11 +5,11 @@ import qrcode
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-PLAY_URL = os.environ.get("PLAY_URL", "https://hua691.github.io/gut-match3-play/?v=12")
+PLAY_URL = os.environ.get("PLAY_URL", "https://hua691.github.io/gut-match3-play/?v=13")
 OUT = os.path.join(ROOT, "海报.png")
 
 W, H = 1080, 2160
-BG = os.path.join(ROOT, "assets", "static", "image", "bg.ead9a73e.jpg")
+BG = os.path.join(ROOT, "背景.png")
 THEME = os.path.join(ROOT, "assets", "static", "image", "theme.24d3b741.png")
 LOGO = os.path.join(ROOT, "image", "logo.png")
 KIT = os.path.join(ROOT, "assets", "static", "image", "prize_kit.png")
@@ -17,10 +17,8 @@ FONT = r"C:\Windows\Fonts\msyhbd.ttc"
 
 def main():
     src = Image.open(BG).convert("RGBA")
-    # 从天空取到木牌，底部花草留给红条
-    src = src.crop((0, 160, src.width, 2680))
     scale = W / src.width
-    bg = src.resize((W, int(src.height * scale)), Image.Resampling.LANCZOS)
+    bg = src.resize((W, int(round(src.height * scale))), Image.Resampling.LANCZOS)
     canvas = Image.new("RGBA", (W, H), (227, 18, 36, 255))
     canvas.paste(bg, (0, 0), bg)
 
