@@ -5,7 +5,7 @@ import qrcode
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-PLAY_URL = os.environ.get("PLAY_URL", "https://hua691.github.io/gut-match3-play/?v=16")
+PLAY_URL = os.environ.get("PLAY_URL", "https://hua691.github.io/gut-match3-play/?v=17")
 OUT = os.path.join(ROOT, "海报.png")
 
 W, H = 1080, 2160
@@ -24,10 +24,10 @@ def main():
     canvas.paste(bg, (0, 0), bg)
 
     theme = Image.open(THEME).convert("RGBA")
-    tw = 920
+    tw = 1000
     th = int(theme.height * tw / theme.width)
     theme = theme.resize((tw, th), Image.Resampling.LANCZOS)
-    canvas.paste(theme, ((W - tw) // 2, 86), theme)
+    canvas.paste(theme, ((W - tw) // 2, 96), theme)
 
     logo = Image.open(LOGO).convert("RGBA")
     lh = 72
