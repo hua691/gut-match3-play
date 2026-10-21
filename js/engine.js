@@ -16,7 +16,7 @@ const RANKS = [
     min: 750,
     name: "益生守护卫士",
     stars: 5,
-    image: "rank1.89c06a4f.png?v=17",
+    image: "rank1.89c06a4f.png?v=18",
     tag: "tag1.d8ae3d69.png",
     comment: "你的菌群管理能力堪称大师级！好菌队伍壮大、坏菌无处藏身。继续保持，好好爱自己，好好爱肠道",
   },
