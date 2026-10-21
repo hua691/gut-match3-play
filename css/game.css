@@ -33,8 +33,8 @@ button, img { user-select: none; }
 button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 .screen, .overlay { position: absolute; inset: 0; }
 .screen { min-height: 100%; background-position: center top; background-size: cover; background-repeat: no-repeat; }
-#home { background-image: url("../assets/static/image/bg-home.jpg?v=18"); }
-#game { background-image: url("../assets/static/image/bg-game.jpg?v=18"); overflow: auto; }
+#home { background-image: url("../assets/static/image/bg-home.jpg?v=19"); }
+#game { background-image: url("../assets/static/image/bg-game.jpg?v=19"); overflow: auto; }
 #rank { background-image: url("../assets/static/image/bg.22ba2e11.jpg"); overflow: auto; }
 #poster { background-image: url("../assets/static/image/bg.9fb073bd.jpg"); overflow: auto; }
 #loading {
@@ -175,6 +175,8 @@ button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 .actions img { height: 1.05rem; width: auto; }
 
 .howto, .sheet { display: flex; align-items: center; justify-content: center; flex-direction: column; }
+.sheet { justify-content: flex-start; }
+.sheet > button { flex-shrink: 0; }
 .howto-card { width: 4.98rem; position: relative; }
 .howto-card > img.rules { width: 100%; height: auto; }
 .finger {
@@ -184,6 +186,7 @@ button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 .howto-go { width: 4.39rem; margin-top: .12rem; }
 .sheet-frame {
   width: 6.59rem; min-height: 7.49rem; padding: 1.9rem .4rem .4rem;
+  flex-shrink: 0; margin-top: auto; margin-bottom: auto;
   background-position: center; background-size: 100% 100%; background-repeat: no-repeat;
 }
 .sheet-frame img { width: 100%; height: auto; }
