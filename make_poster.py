@@ -5,13 +5,12 @@ import qrcode
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-PLAY_URL = os.environ.get("PLAY_URL", "https://hua691.github.io/gut-match3-play/?v=19")
+PLAY_URL = os.environ.get("PLAY_URL", "https://hua691.github.io/gut-match3-play/?v=20")
 OUT = os.path.join(ROOT, "海报.png")
 
 W, H = 1080, 2160
 BG = os.path.join(ROOT, "assets", "static", "image", "bg-home.jpg")
 THEME = os.path.join(ROOT, "assets", "static", "image", "theme.24d3b741.png")
-LOGO = os.path.join(ROOT, "image", "logo.png")
 KIT = os.path.join(ROOT, "assets", "static", "image", "prize_kit.png")
 FONT = r"C:\Windows\Fonts\msyhbd.ttc"
 
@@ -28,12 +27,6 @@ def main():
     th = int(theme.height * tw / theme.width)
     theme = theme.resize((tw, th), Image.Resampling.LANCZOS)
     canvas.paste(theme, ((W - tw) // 2, 96), theme)
-
-    logo = Image.open(LOGO).convert("RGBA")
-    lh = 72
-    lw = int(logo.width * lh / logo.height)
-    logo = logo.resize((lw, lh), Image.Resampling.LANCZOS)
-    canvas.paste(logo, (28, 18), logo)
 
     overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)

@@ -33,8 +33,8 @@ button, img { user-select: none; }
 button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 .screen, .overlay { position: absolute; inset: 0; }
 .screen { min-height: 100%; background-position: center top; background-size: cover; background-repeat: no-repeat; }
-#home { background-image: url("../assets/static/image/bg-home.jpg?v=19"); }
-#game { background-image: url("../assets/static/image/bg-game.jpg?v=19"); overflow: auto; }
+#home { background-image: url("../assets/static/image/bg-home.jpg?v=20"); }
+#game { background-image: url("../assets/static/image/bg-game.jpg?v=20"); overflow: auto; }
 #rank { background-image: url("../assets/static/image/bg.22ba2e11.jpg"); overflow: auto; }
 #poster { background-image: url("../assets/static/image/bg.9fb073bd.jpg"); overflow: auto; }
 #loading {
@@ -43,10 +43,6 @@ button { border: 0; padding: 0; background: transparent; cursor: pointer; }
 }
 #loading[hidden], [hidden] { display: none !important; }
 
-.logo {
-  position: absolute; left: .2rem; top: .16rem;
-  height: .63rem; width: 3.4rem; object-fit: contain; object-position: left center;
-}
 .side-tabs {
   position: absolute; right: 0; top: 1.8rem;
   display: flex; flex-direction: column; gap: .3rem;
